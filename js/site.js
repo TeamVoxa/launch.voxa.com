@@ -117,7 +117,7 @@
           return showAlert("Please select the CRM that you currently use");
         }
 
-        //alert(email + " " + crm);
+        return showAlert("Slow down, this is still under construction.");
       });
     }
 
