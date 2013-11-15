@@ -1,4 +1,4 @@
-chrishalaschek.com
+launch.voxa.com
 ==================
 
-chrishalaschek.com
+Voxa.com launch page
