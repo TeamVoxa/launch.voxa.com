@@ -121,10 +121,20 @@
       });
     }
 
+    function showSplash(){
+      setTimeout(function(){
+        var splash = $(".splash-wrap");
+        splash.hide();
+        splash.css("visibility", "visible");
+        $(".splash-wrap").fadeIn();
+      }, 400);
+    }
+
 
     initSplashCentering();
     initForm();
     initAnalytics();
+    showSplash();
   });
 })();
 
