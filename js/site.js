@@ -41,7 +41,8 @@
         var height = $(window).height();
         var left = Math.max(0, (width / 2) - (el.width() / 2)) + "px";
         var top = Math.max(0, (height / 2) - (el.outerHeight() / 2)) + "px";
-        var position = isTouch()? "relative" : "fixed"
+        //var position = isTouch()? "relative" : "fixed"
+        var position = "relative";
 
         el.css("position",position).css("left", left).css("top", top);
         el.attr("data-top", top);

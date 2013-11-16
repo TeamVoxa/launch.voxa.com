@@ -49,9 +49,6 @@ html, body {
 
 .splash-wrap{
   width: 550px;
-  position: fixed;
-  top: 0;
-  left: 0;
   overflow: visible;
   visibility: hidden;
 }
@@ -79,6 +76,11 @@ html, body {
   color: whitesmoke;
   font-size: 18px;
 }
+
+.headline h5 span{
+  display: inline;
+}
+
 
 
 
@@ -134,7 +136,7 @@ input::-webkit-input-placeholder{
 .customSelect { 
   text-align: left;
   background-color: rgba(71, 69, 65,.6) !important;
-  background:#fff url(../img/carrot.png) 185px 22px no-repeat;
+  background:#fff url(../img/carrot.png) 95% 22px no-repeat;
   padding: 12px 12px;
   line-height: 1.428571429;
   width: 100%;
@@ -167,10 +169,12 @@ input::-webkit-input-placeholder{
 /* Footer */
 
 .footer{
+  overflow: auto;
   text-align: center;
   color: #fff;
   font-size: 14px;
   padding-top: 20px;
+  margin-bottom: 20px;
   line-height: 20px;
 }
 
@@ -181,10 +185,10 @@ input::-webkit-input-placeholder{
 
 .social{
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .social img{
-  margin-top: 20px;
   margin-left: 5px;
   margin-right: 5px;
   image-rendering: -webkit-optimize-contrast;

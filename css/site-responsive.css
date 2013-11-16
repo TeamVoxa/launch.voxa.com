@@ -6,68 +6,10 @@
  
 /* Portrait tablet to landscape and desktop */
 @media (max-width: 1199px) { 
-  .project{
-    height: 180px;
-  }
-
-  .project-odr img{
-    top: 18px;
-  }
-
 
 }
 
 @media (max-width: 979px) { 
-  .section-me{
-    /*top: 15%;*/
-  }
-
-  .section-me .title{
-    font-size:45px;
-    line-height:45px;
-  }
-
-
-  .container.projects-content .span8 {
-    width: 620px;
-  }
-
-  .projects-content .offset2{
-    margin-left: 70px;
-  }
-
-  .project{
-    height: 180px;
-    /*width: 50%;*/
-  }
-  
-  .projects-spacer{
-    height: 250px;
-  }
-
-
-
-
-  .project-thesis img{
-    top: 35px;
-  }
-
-  .project-sideplay img{
-    top: 15px;
-  }
-
-  .project-odr img{
-    top: 18px;
-  }
-
-  .project-rpt img{
-    top: 30px;
-  }
-
-/*.projects-spacer.catan{
-  background-image: url(../img/catan-narrow2.png);
-}*/
-
 
 }
 
@@ -81,189 +23,109 @@
     padding-right: 0;
   }
 
-  .container.projects-content .span8 {
+}
+
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 560px) { 
+
+  .splash-wrap{
     width: 100%;
   }
 
-  .projects-content .offset2{
-    margin-left: 0;
+  .content{
+    background-color: transparent;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-image: none;
+    border: none;
   }
 
-  .container{
-    padding-left: 20px;
-    padding-right: 20px;
+  .headline h3{
+    margin-top: 30px;
   }
 
-  .arrow-wrap{
-    width: 100%;
-  }
-
-  .section-projects .projects-content{
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-
-
-
-  .section{
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
-  .section-me{
-    /*top: 20%;*/
-    padding-bottom: 80px;
+  .headline h5 span{
+    display: block;
   }
 
 
-  .section-projects .title{
-    padding-bottom: 20px;
+
+  .beta input, .customSelect{
+    background-color: rgba(71, 69, 65,.8) !important;
   }
 
-  .section-projects{
-    padding-bottom: 0px;
+  .beta button{
+    background-color: rgba(140, 137, 132,.8) !important;
   }
 
+  .footer{
+    padding-top: 0px;
+  }
 
-  .project{
-    height: 180px;
+}
+
+
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  body{
+    padding: 0 20px;
+  }
+
+  .splash-wrap{
+    position: static !important;
+  }
+
+  .logo{
     width: 50%;
   }
 
 
+  .headline h3{
+    font-size: 36px;
+  }
 
-
-  .project-trendwars img{
-    width: 65%;
-    top: 30%;
+  .headline h5{
+    font-size: 16px;
   }
 
 
-  .project-clados img{
-    width: 80%;
+  .beta .inputs, .beta button, .beta .alert{
+    width: 100%;
+    margin: 0 auto;
   }
 
-  .project-thesis img{
-    width: 120px;
-    top: 20%;
+  .beta input, .beta .select-wrap{
+    width: 100%;
+    float: left;
+  }
+
+  .beta input{
+    margin-bottom: 15px !important;
+  }
+
+  .beta .alert{
+    margin-top: 15px !important;
   }
 
 
-  .project-sideplay img{
-    top: 15px;
-  }
-
-  .project-odr img{
-    height: 90%;
-  }
-
-  .project-rpt img{
-    width: 200px;
-    top: 20%;
-  }
-
-  .publication-title span{
-    line-height: 25px;
-  }
-
-}
- 
-/* Landscape phones and down */
-@media (max-width: 480px) {
-  .section-me{
-    top: 0px;
-    padding-bottom: 40px;
-    padding-top: 0px;
-  }
-
-  .section-projects{
-    border-bottom: 2px solid #F0FFFF;
-  }
-
-  .splash-wrap .container{
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  .section .title{
-    font-size:30px;
-    line-height:35px;
+  .footer{
     margin-bottom: 10px;
   }
 
-  .projects-spacer{
-    height: 100px;
+  .social{
+    float: right;
+    margin-top: 0px;
   }
 
-  .social {
-    margin-top: 10px;
-    width: 40px;
-    height: 40px;
-    background-image: url('../img/social-icons-small.png');
-  }
-
-  .arrow-wrap{
-    display: none;
-  }
-
-  .social.twitter{
-    background-position: -40px 0px;
-  }
-
-  .social.github{
-    background-position: -120px 0px;
-  }
-
-  .social.facebook{
-    background-position: -80px 0px;
-  }
-
-  .social.cv{
-    background-position: -160px 0px;
-  }
-
-  .section-projects{
-    border-bottom: 2px solid #F0FFFF;
-  }
-
-
-  .project{
-    width: 100%;
-  }
-
-  .project-trendwars img{
-    width: 65%;
-    top: 20%;
-  }
-
-
-  .project-clados img{
-    width: 280px;
-  }
-
-  .project-thesis img{
-    width: 120px;
-    top: 20%;
-  }
-
-
-  .project-sideplay img{
-    top: 15px;
-  }
-
-  .project-odr img{
-    height: 90%;
-  }
-
-  .project-rpt img{
-    width: 200px;
-    top: 20%;
-  }
-
-  .active-project{
+  .copy{
     float: left;
-    width: 100%;
+    margin-top: 10px;
   }
+
 
 }
 
@@ -274,14 +136,7 @@
  only screen and (min--moz-device-pixel-ratio: 1.5),
      only screen and (min-device-pixel-ratio: 1.5) {
 
-  .social {
-    background-image: url('../img/social-icons@2x.png');
-    -moz-background-size:240px 60px;
-    -ie-background-size:240px 60px;
-    -o-background-size:240px 60px;
-    -webkit-background-size:240px 60px;
-    background-size:240px 60px;
-  }
+  
 }
 
 @media only screen and (max-width: 480px),
@@ -290,30 +145,4 @@
  only screen and (min--moz-device-pixel-ratio: 1.5),
      only screen and (min-device-pixel-ratio: 1.5) {
 
-  .social {
-    width: 40px;
-    height: 40px;
-    background-image: url('../img/social-icons@2x.png');
-    -moz-background-size:160px 40px;
-    -ie-background-size:160px 40px;
-    -o-background-size:160px 40px;
-    -webkit-background-size:160px 40px;
-    background-size:160px 40px;
-  }
-
-  .social.twitter{
-    background-position: -40px 0px;
-  }
-
-  .social.github{
-    background-position: -120px 0px;
-  }
-
-  .social.facebook{
-    background-position: -80px 0px;
-  }
-
-  .social.cv{
-    background-position: -160px 0px;
-  }
 }
