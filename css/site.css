@@ -158,6 +158,7 @@ input::-webkit-input-placeholder{
   padding: 12px 12px;
   line-height: 1.428571429;
   width: 100%;
+  white-space: nowrap;
 }
 
 
