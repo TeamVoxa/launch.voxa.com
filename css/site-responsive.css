@@ -98,6 +98,10 @@
     margin: 0 auto;
   }
 
+  .beta button{
+    font-weight: bolder;
+  }
+
   .beta input, .beta .select-wrap{
     width: 100%;
     float: left;
@@ -125,6 +129,11 @@
     float: left;
     margin-top: 10px;
   }
+
+  .footer{
+    font-size: 10px;
+  }
+
 
 
 }
