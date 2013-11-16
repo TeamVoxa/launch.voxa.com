@@ -34,7 +34,7 @@ html, body {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../img/background.png);
-
+  min-width: 280px;
 }
 
 
