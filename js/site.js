@@ -141,8 +141,8 @@
 
       var success = $(".success");
       
-      var shareUrl = "http://voxa.com?kid=" + data.social_id;
-      
+      var shareUrl = window.location.protocol + "//" + window.location.hostname + "/?kid=" + data.social_id;
+
       // update url
       var url = success.find(".share-url");
       url.attr("href", shareUrl);
