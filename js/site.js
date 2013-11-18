@@ -33,6 +33,13 @@
     }
 
 
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search.toLowerCase());
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
 
     function initSplashCentering(){
       var updatePos = function () {
@@ -167,10 +174,12 @@
       var button = $("button");
       var buttonText = button.text();
 
+
+
       var data = {
         email: $("#email").val(),
         crm: $("#crm").val(),
-        social_id: null
+        social_id: getParameterByName("kid")
       };
 
       function toggleSubmit(locked){
