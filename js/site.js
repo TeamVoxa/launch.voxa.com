@@ -4,6 +4,7 @@
   $(document).ready(function(){
 
     var alertTimeout;
+    var kolID = 23560;
 
     $('body,html').bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup', function(e){
       if ( e.which > 0 || e.type == "mousedown" || e.type == "mousewheel"){
@@ -68,8 +69,12 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-42462226-1', 'chrishalaschek.com');
+      ga('create', 'UA-45816661-1', 'voxa.com');
       ga('send', 'pageview');
+
+      new KOLResponse();
+      new KOLValidation();
+      new KOLStats('//api.kickofflabs.com', kolID);
     }
 
     function removeAlert(ingoreFade){
@@ -195,7 +200,7 @@
       toggleSubmit(true);
 
       $.ajax({
-        url: 'https://api.kickofflabs.com/v1/23560/subscribe',
+        url: 'https://api.kickofflabs.com/v1/' + kolID + '/subscribe',
         data: data,
         dataType: 'jsonp',
         jsonp: 'jsonp',
