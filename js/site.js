@@ -101,6 +101,11 @@
       $("select").customSelect();
 
       $(".beta button").tap(function(){
+        // check if button is locked
+        if($(this).hasClass("locked")){
+          return;
+        }
+
         removeAlert(true);
 
         var email = $("#email").val();
@@ -118,9 +123,87 @@
           return showAlert("Please select the CRM that you currently use");
         }
 
-        return showAlert("Slow down, this is still under construction.");
+        //return showAlert("Slow down, this is still under construction.");
+        submitForm();
       });
     }
+
+
+    function showSuccess(data){
+      console.log(data);
+
+      var success = $(".success");
+      
+      var shareUrl = "http://voxa.com?kid=" + data.social_id;
+      
+      // update url
+      var url = success.find(".share-url");
+      url.attr("href", shareUrl);
+      url.text(shareUrl);
+
+      //update facebook
+      $("#share_facebook").attr("onclick", "window.open('https://www.facebook.com/sharer.php?u=" + shareUrl + "', '_blank', 'width=800,height=400')");
+
+      //update twitter
+      $("#share_twitter").attr("onclick", "window.open('https://twitter.com/share?url=" + encodeURIComponent(shareUrl) + "&text=Check+out+Voxa!', '_blank', 'width=800,height=300')");
+
+      //update linkedin
+      $("#share_linkedin").attr("onclick", "window.open('http://www.linkedin.com/shareArticle?mini=true&url=" + shareUrl + "&title=Voxa', '_blank', 'width=800,height=400')");
+
+      //update g+
+      $("#share_googleplus").attr("href", "https://plus.google.com/share?url=" + shareUrl);
+      $("#share_googleplus").attr("onclick", "javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;");
+
+      //update email
+      $("#share_email").attr("href", "mailto:?subject=Voxa&body=Check out Voxa! " + shareUrl);
+
+
+      success.fadeIn();
+
+      $(".info").remove()
+    }
+
+    function submitForm(){
+      var button = $("button");
+      var buttonText = button.text();
+
+      var data = {
+        email: $("#email").val(),
+        crm: $("#crm").val(),
+        social_id: null
+      };
+
+      function toggleSubmit(locked){
+        if(locked){
+          button.addClass("locked");
+          button.text("Submitting...");
+        }else{
+          button.removeClass("locked");
+          button.text(buttonText);
+        }
+      }
+
+      toggleSubmit(true);
+
+      $.ajax({
+        url: 'https://api.kickofflabs.com/v1/23560/subscribe',
+        data: data,
+        dataType: 'jsonp',
+        jsonp: 'jsonp',
+        success: function(data){
+          toggleSubmit();
+          showSuccess(data);
+        },
+        error: function(){
+          toggleSubmit();
+          showAlert("Error requesting invite. Please try again.");
+        },
+        timeout: 2000,
+        context: this
+      });
+    }
+
+
 
     function showSplash(){
       setTimeout(function(){
@@ -138,4 +221,3 @@
     showSplash();
   });
 })();
-

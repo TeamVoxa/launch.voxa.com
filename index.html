@@ -57,20 +57,49 @@
       </div>
 
       <div class="beta">
-        <div class="inputs">
-          <input type="email" class="form-control" id="email" placeholder="Email Address"/>
-          <div class="select-wrap">
-            <select id="crm">
-              <option value="">Select CRM</option>
-              <option value="Salesforce.com">Salesforce.com</option>
-              <option value="Zoho">Zoho</option>
-              <option value="Microsoft Dynamics">Microsoft Dynamics</option>
-              <option value="Infusionsoft">Infusionsoft</option>
-              <option value="Other">Other</option>
-            </select>
+        <div class="success">
+          <h4>Thanks for your interest in Voxa!</h4>
+          <h4>We'll be in touch soon!</h4>
+          <p>In the meantime, spread the word by clicking on any of the social icons below or copy and paste the personalized URL.</p>
+          <p><a class="share-url" href="http://voxa.com?kid="></a></p>
+
+          <div class="share-links">
+            <div id="share_links">
+              <a id="share_facebook" href="#" class="share_button" onclick="">
+                <img src="./img/facebook_share.png" height="32" width="32">
+              </a>
+              <a id="share_twitter" href="#" class="share_button" onclick="">
+                <img src="./img/twitter_share.png" height="32" width="32">
+              </a>
+              <a id="share_linkedin" href="#" class="share_button" onclick="">
+                <img src="./img/linkedin_share.png" height="32" width="32">
+              </a>
+              <a id="share_googleplus" class="share_button" href="" onclick="">
+                <img src="./img/google_plus_share.png" height="32" width="32">
+              </a>
+              <a id="share_email" class="share_button" href="" target="_blank">
+                <img src="./img/email_share.png" alt="Email Share" height="32" width="32">
+              </a>  
+          </div>
           </div>
         </div>
-        <button type="button" class="btn btn-default btn-lg">Request Invite</button>
+
+        <div class="info">
+          <div class="inputs">
+            <input type="email" class="form-control" id="email" placeholder="Email Address"/>
+            <div class="select-wrap">
+              <select id="crm">
+                <option value="">Select CRM</option>
+                <option value="Salesforce.com">Salesforce.com</option>
+                <option value="Zoho">Zoho</option>
+                <option value="Microsoft Dynamics">Microsoft Dynamics</option>
+                <option value="Infusionsoft">Infusionsoft</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          <button type="button" class="btn btn-default btn-lg">Request Invite</button>
+        </div>
       </div>
     </div>
 
@@ -82,6 +111,7 @@
       <div class="copy"><span>&copy;</span> VOXA, llc. All right reserved.</div>
     </div>
 
+    <div id="fb-root"></div>
   </div>
 
   <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
