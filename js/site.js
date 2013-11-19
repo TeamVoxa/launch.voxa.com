@@ -152,7 +152,7 @@
 
 
     function showSuccess(data){
-      console.log(data);
+      //console.log(data);
 
       var success = $(".success");
       
