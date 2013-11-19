@@ -121,7 +121,17 @@
         removeAlert(true);
 
         var email = $("#email").val();
+        var firstName = $("#first-name").val();
+        var lastName = $("#last-name").val();
         var crm = $("#crm").val();
+
+        if(firstName == undefined || firstName == ""){
+          return showAlert("Please enter your first name");
+        }
+
+        if(lastName == undefined || lastName == ""){
+          return showAlert("Please enter your last name");
+        }
 
         if(email == undefined || email == ""){
           return showAlert("Please enter email address");
@@ -184,7 +194,9 @@
       var data = {
         email: $("#email").val(),
         crm: $("#crm").val(),
-        social_id: getParameterByName("kid")
+        social_id: getParameterByName("kid"),
+        first_name: $("#first-name").val(),
+        last_name: $("#last-name").val()
       };
 
       function toggleSubmit(locked){

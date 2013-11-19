@@ -165,6 +165,14 @@ input::-webkit-input-placeholder{
   color: whitesmoke !important;
 }
 
+#first-name, #last-name{
+  margin-bottom: 10px !important;
+}
+
+#last-name{
+  float: right;
+}
+
 
 .beta .select-wrap{
   text-align: left;
