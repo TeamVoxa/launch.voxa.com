@@ -7181,10 +7181,13 @@ html, body {
   border: 1px solid #333;
 }
 
+.headline{
+  padding: 0 20px;
+}
 
 .headline h3{
   color: #7B746E;
-  font-size: 44px;
+  font-size: 40px;
   margin-top: 60px;
 }
 
@@ -7192,6 +7195,7 @@ html, body {
 .headline h5{
   color: whitesmoke;
   font-size: 18px;
+  line-height: 1.2em;
 }
 
 .headline h5 span{
@@ -7437,13 +7441,18 @@ input::-webkit-input-placeholder{
     padding: 0 20px;
   }
 
+  .headline{
+    padding: 0;
+  }
+
+
   .splash-wrap{
     position: static !important;
     /*left: 0px !important;*/
   }
 
   .logo{
-    width: 50%;
+    width: 60%;
   }
 
 
